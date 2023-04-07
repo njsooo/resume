@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #ffecd2 0%, #fcb69f 100%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 53.5%;
+  height: 100%;
+  background-color: #fff;
+}
+
+main > section > .title {
+  padding-left: 3%;
+  font-weight: 700;
+  font-size: 6rem;
+}
+main > section > .title + * {
+  margin-top: 5rem;
+}
+
+#introduction {
+  padding-top: 40px;
+}
+#introduction .contents {
+  display: flex;
+}
+#introduction .contents .left {
+  width: 50%;
+}
+#introduction .contents .left .card {
+  width: 380px;
+  margin-left: auto;
+  padding-top: 40px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+}
+#introduction .contents .left .card .face {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+#introduction .contents .left .card p {
+  margin-top: 40px;
+}
+#introduction .contents .left .card .name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+#introduction .contents .left .card .birth {
+  font-size: 1.25rem;
+}
+#introduction .contents .left .card .job {
+  position: relative;
+  padding-top: 40px;
+  font-size: 1.25rem;
+}
+#introduction .contents .left .card .job::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: dodgerblue;
+}
+#introduction .contents .left .card .links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-top: 50px;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+#introduction .contents .left .card .links a {
+  display: block;
+  color: #fff;
+}
+#introduction .contents .right {
+  padding: 40px 0 0 80px;
+}
+#introduction .contents .right .column ~ .column {
+  margin-top: 50px;
+}
+#introduction .contents .right .column .title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+#introduction .contents .right .column ul {
+  margin-top: 30px;
+}
+#introduction .contents .right .column-type-a li ~ li {
+  margin-top: 20px;
+}
+#introduction .contents .right .column-type-a li .date {
+  color: #989898;
+}
+#introduction .contents .right .column-type-a li .detail {
+  margin-left: 30px;
+}
+#introduction .contents .right .column-type-b ul {
+  display: flex;
+  gap: 15px;
+}
+
+#works {
+  margin-top: 12rem;
+}
+#works .item {
+  display: flex;
+  box-sizing: border-box;
+}
+#works .item .left {
+  width: 50%;
+}
+#works .item .left .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 400px;
+  height: 400px;
+  margin-left: auto;
+  border-radius: 30px 0 0 30px;
+  background-color: #fff;
+}
+#works .item .left .card .title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+#works .item .left .card .links {
+  display: flex;
+  gap: 10px;
+}
+#works .item .left .card .links a {
+  display: block;
+  padding: 8px 12px;
+  border: 2px solid LightGreen;
+  border-radius: 20px;
+  transition: background-color 0.25s, color 0.25s;
+}
+#works .item .left .card .links a:hover {
+  background-color: LightGreen;
+  color: #fff;
+}
+#works .item .right img {
+  width: 600px;
+  height: 400px;
+  border-radius: 0 30px 30px 0;
+}
+
+#contact {
+  margin-top: 12rem;
+  padding-bottom: 40px;
+}
+#contact .contents {
+  display: flex;
+}
+#contact .contents .left {
+  width: 50%;
+}
+#contact .contents .left .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 400px;
+  height: 400px;
+  margin-left: auto;
+  padding-left: 50px;
+  border-radius: 30px 0 0 30px;
+  background-color: #fff;
+}
+#contact .contents .left .card .phone,
+#contact .contents .left .card .email {
+  display: flex;
+  align-items: center;
+}
+#contact .contents .left .card .phone svg,
+#contact .contents .left .card .email svg {
+  width: 80px;
+  height: 80px;
+}
+#contact .contents .left .card .phone .text,
+#contact .contents .left .card .email .text {
+  margin-left: 30px;
+  font-size: 1.5rem;
+}
+#contact .contents .right {
+  width: 600px;
+  border-radius: 0 30px 30px 0;
+  background-color: mediumaquamarine;
+}
+
+@media screen and (max-width: 900px) {
+  body::before {
+    display: none;
+  }
+  main > section > .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #introduction .contents {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  #introduction .contents .left {
+    width: auto;
+  }
+  #introduction .contents .left .card {
+    margin: 0 auto;
+  }
+  #introduction .contents .right {
+    margin: 3rem auto 0;
+    padding: 0;
+    transform: translateX(-11px);
+  }
+  #works {
+    margin-top: 5rem;
+  }
+  #works .item-list {
+    margin-top: 2rem;
+  }
+  #works .item {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  #works .item .left {
+    width: 100%;
+  }
+  #works .item .left .card {
+    width: 100%;
+    max-width: none;
+    height: 280px;
+    margin: 0;
+    border-radius: 30px 30px 0 0;
+  }
+  #works .item .right img {
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+  }
+  #contact {
+    margin-top: 5rem;
+  }
+  #contact .contents {
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 0 30px;
+  }
+  #contact .contents .left {
+    width: 100%;
+  }
+  #contact .contents .left .card {
+    width: 100%;
+    max-width: none;
+    height: 280px;
+    margin: 0;
+    border-radius: 30px 30px 0 0;
+  }
+  #contact .contents .right {
+    width: 100%;
+    height: 300px;
+    border-radius: 0 0 30px 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
