@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 
+/* stylelint-disable */
 html,
 body,
 div,
@@ -91,6 +92,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -105,18 +107,22 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
   font-family: "Noto Sans KR", sans-serif;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -124,14 +130,32 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* My Custom */
+
 a {
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  &::placeholder {
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 img {

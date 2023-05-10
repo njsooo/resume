@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <link rel="stylesheet" href="./scss/style.css" />
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
     <main>
       <!-- INTRODUCTION -->
       <section id="introduction">
-        <h2 class="title">Introduction</h2>
         <div class="contents">
           <div class="left">
             <div class="card">
@@ -80,7 +84,7 @@
 
       <!-- WORKS -->
       <section id="works">
-        <h2 class="title">Work</h2>
+        <h2 class="title">포트폴리오</h2>
         <ul class="item-list">
           <li class="item">
             <div class="left">
@@ -95,7 +99,7 @@
               </div>
             </div>
             <div class="right">
-              <img src="./asset/busanjin.png" alt="" />
+              <img src="/asset/busanjin.png" alt="" />
             </div>
           </li>
         </ul>
@@ -104,7 +108,7 @@
 
       <!-- CONTACT -->
       <section id="contact">
-        <h2 class="title">Contact</h2>
+        <h2 class="title">연락</h2>
         <div class="contents">
           <div class="left">
             <div class="card">
@@ -156,13 +160,47 @@
                     </g>
                   </g>
                 </svg>
-                <span class="text">foo@gmail.com</span>
+                <span class="text">devnjsoo@gmail.com</span>
               </a>
             </div>
           </div>
 
           <div class="right">
-            <h3>이메일 보내기 예정</h3>
+            <h3 class="title">이메일 보내기</h3>
+            <form action="#" id="form-send-email">
+              <div class="row">
+                <label for="name">성명</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="from_name"
+                  placeholder="발신인"
+                  required
+                />
+              </div>
+
+              <div class="row">
+                <label for="email">연락처</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="reply_to"
+                  placeholder="남기실 연락처를 입력해 주세요"
+                  required
+                />
+              </div>
+
+              <div class="row">
+                <label for="message">내용</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="내용을 입력해 주세요"
+                ></textarea>
+              </div>
+
+              <button type="submit">전송</button>
+            </form>
           </div>
         </div>
       </section>
