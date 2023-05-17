@@ -269,6 +269,7 @@ body {
 }
 #introduction .right .column-type-b ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -539,4 +540,22 @@ body {
   #portfolio {
     margin-top: 40px;
   }
-}
+  #portfolio .section-title .text {
+    font-size: 2rem;
+  }
+  #portfolio .section-title .text::before {
+    left: -40px;
+  }
+  #portfolio .section-title .text::after {
+    right: -40px;
+  }
+  #contact .section-title .text {
+    font-size: 2rem;
+  }
+  #contact .section-title .text::before {
+    left: -40px;
+  }
+  #contact .section-title .text::after {
+    right: -40px;
+  }
+}/*# sourceMappingURL=style.css.map */
