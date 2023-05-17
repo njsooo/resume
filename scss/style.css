@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
-/* http://meyerweb.com/eric/tools/css/reset/ 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -143,10 +141,13 @@ a {
   text-decoration: none;
 }
 
+input,
+textarea {
+  font-family: "Noto Sans KR", sans-serif;
+}
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-family: "Noto Sans KR", sans-serif;
 }
-
 input::placeholder,
 textarea::placeholder {
   font-family: "Noto Sans KR", sans-serif;
@@ -165,12 +166,22 @@ img {
   width: 100%;
 }
 
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
 body {
   background-image: linear-gradient(to right bottom, #ffecd2, #fcb69f);
 }
-body::before {
+
+#introduction {
+  position: relative;
+  padding: 40px 0;
+}
+#introduction::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
@@ -178,56 +189,40 @@ body::before {
   height: 100%;
   background-color: #fff;
 }
-
-main > section > .title {
-  padding-left: 3%;
-  font-weight: 700;
-  font-size: 6rem;
-}
-main > section > .title + * {
-  margin-top: 5rem;
-}
-
-#introduction {
-  padding-top: 40px;
-}
-#introduction .contents {
+#introduction .container {
   display: flex;
 }
-#introduction .contents .left {
-  width: 50%;
-}
-#introduction .contents .left .card {
-  width: 380px;
-  margin-left: auto;
+#introduction .left {
+  width: 100%;
+  max-width: 380px;
   padding-top: 40px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
 }
-#introduction .contents .left .card .face {
+#introduction .left .face {
   width: 200px;
   height: 200px;
   margin: 0 auto;
   border-radius: 50%;
   background-color: #ccc;
 }
-#introduction .contents .left .card p {
-  margin-top: 40px;
-}
-#introduction .contents .left .card .name {
+#introduction .left .name {
   font-weight: 700;
   font-size: 1.5rem;
+  margin-top: 40px;
 }
-#introduction .contents .left .card .birth {
+#introduction .left .birth {
   font-size: 1.25rem;
+  margin-top: 40px;
 }
-#introduction .contents .left .card .job {
+#introduction .left .job {
   position: relative;
   padding-top: 40px;
+  margin-top: 40px;
   font-size: 1.25rem;
 }
-#introduction .contents .left .card .job::before {
+#introduction .left .job::before {
   content: "";
   position: absolute;
   top: 0;
@@ -238,7 +233,7 @@ main > section > .title + * {
   margin: 0 auto;
   background-color: dodgerblue;
 }
-#introduction .contents .left .card .links {
+#introduction .left .links {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -247,171 +242,225 @@ main > section > .title + * {
   margin-top: 50px;
   background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
-#introduction .contents .left .card .links a {
-  display: block;
+#introduction .left .links a {
   color: #fff;
 }
-#introduction .contents .right {
+#introduction .right {
   padding: 40px 0 0 80px;
 }
-#introduction .contents .right .column ~ .column {
+#introduction .right .column ~ .column {
   margin-top: 50px;
 }
-#introduction .contents .right .column .title {
+#introduction .right .column .title {
   font-weight: 700;
   font-size: 1.5rem;
 }
-#introduction .contents .right .column ul {
+#introduction .right .column ul {
   margin-top: 30px;
 }
-#introduction .contents .right .column-type-a li ~ li {
+#introduction .right .column-type-a li ~ li {
   margin-top: 20px;
 }
-#introduction .contents .right .column-type-a li .date {
+#introduction .right .column-type-a li .date {
   color: #989898;
 }
-#introduction .contents .right .column-type-a li .detail {
+#introduction .right .column-type-a li .detail {
   margin-left: 30px;
 }
-#introduction .contents .right .column-type-b ul {
+#introduction .right .column-type-b ul {
   display: flex;
   gap: 15px;
 }
 
-#works {
-  margin-top: 12rem;
+#portfolio {
+  margin-top: 100px;
 }
-#works .item {
-  display: flex;
-  box-sizing: border-box;
+#portfolio .section-title {
+  text-align: center;
 }
-#works .item .left {
-  width: 50%;
+#portfolio .section-title .text {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 3rem;
 }
-#works .item .left .card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  max-width: 400px;
-  height: 400px;
-  margin-left: auto;
-  border-radius: 30px 0 0 30px;
+#portfolio .section-title .text::before, #portfolio .section-title .text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1em;
+  height: 2px;
+  background-color: #333;
+}
+#portfolio .section-title .text::before {
+  left: -80px;
+}
+#portfolio .section-title .text::after {
+  right: -80px;
+}
+#portfolio .portfolio-list {
+  margin-top: 40px;
+}
+#portfolio .portfolio-list li {
+  padding: 2rem;
   background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-#works .item .left .card .title {
-  font-weight: 700;
+#portfolio .portfolio-list li ~ li {
+  margin-top: 40px;
+}
+#portfolio .portfolio-list li:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+#portfolio .portfolio-list li:hover .title a::before {
+  transform: scale(1);
+}
+#portfolio .portfolio-list .title a {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-weight: 500;
   font-size: 1.5rem;
 }
-#works .item .left .card .links {
+#portfolio .portfolio-list .title a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 20%;
+  background-color: lightcoral;
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+#portfolio .portfolio-list .part {
+  margin-top: 20px;
+}
+#portfolio .portfolio-list .tech {
+  margin-top: 20px;
+}
+#portfolio .portfolio-list .tool {
+  margin-top: 20px;
+}
+#portfolio .portfolio-list h4 {
+  margin-top: 20px;
+}
+#portfolio .portfolio-list .link-list {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 12px 10px;
+  margin-top: 20px;
 }
-#works .item .left .card .links a {
-  display: block;
+#portfolio .portfolio-list .link-list a {
+  display: inline-block;
   padding: 8px 12px;
-  border: 2px solid LightGreen;
+  border: 2px solid #fed9c0;
   border-radius: 20px;
-  transition: background-color 0.25s, color 0.25s;
+  transition: background-color 0.15s ease-out, color 0.1s ease-out;
 }
-#works .item .left .card .links a:hover {
-  background-color: LightGreen;
+#portfolio .portfolio-list .link-list a:hover {
+  background-color: #fed9c0;
   color: #fff;
 }
-#works .item .right img {
-  width: 600px;
-  height: 400px;
-  border-radius: 0 30px 30px 0;
-}
 
 #contact {
-  margin-top: 12rem;
-  padding-bottom: 40px;
+  margin-top: 80px;
+  padding-bottom: 60px;
 }
-#contact .contents {
-  display: flex;
+#contact .section-title {
+  text-align: center;
 }
-#contact .contents .left {
-  width: 50%;
+#contact .section-title .text {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 3rem;
 }
-#contact .contents .left .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-  max-width: 400px;
-  height: 400px;
-  padding-left: 50px;
-  border-radius: 30px 0 0 30px;
+#contact .section-title .text::before, #contact .section-title .text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1em;
+  height: 2px;
+  background-color: #333;
+}
+#contact .section-title .text::before {
+  left: -80px;
+}
+#contact .section-title .text::after {
+  right: -80px;
+}
+#contact .content {
+  margin-top: 80px;
+}
+#contact .info-area {
+  padding: 1rem;
   background-color: #fff;
 }
-#contact .contents .left .card .phone,
-#contact .contents .left .card .email {
+#contact .info-area svg {
+  width: 50px;
+  height: 50px;
+}
+#contact .info-area .phone,
+#contact .info-area .email {
   display: flex;
   align-items: center;
 }
-#contact .contents .left .card .phone svg,
-#contact .contents .left .card .email svg {
-  width: 80px;
-  height: 80px;
+#contact .info-area .phone .text,
+#contact .info-area .email .text {
+  margin-left: 10px;
+  font-size: 1.25rem;
+  position: relative;
 }
-#contact .contents .left .card .phone .text,
-#contact .contents .left .card .email .text {
-  margin-left: 30px;
-  font-size: 1.5rem;
-}
-#contact .contents .right {
-  width: 600px;
-  margin-top: 30px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.25);
-}
-
-#contact {
-  margin-top: 5rem;
-}
-#contact .contents {
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  padding: 0 30px;
-}
-#contact .left {
+#contact .info-area .phone .text::before,
+#contact .info-area .email .text::before {
+  content: "";
+  position: absolute;
   width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+  background-color: lightcoral;
 }
-#contact .left .card {
-  width: 100%;
-  max-width: none;
-  height: 280px;
-  margin: 0;
-  border-radius: 30px 30px 0 0;
+#contact .info-area .phone:hover .text::before,
+#contact .info-area .email:hover .text::before {
+  transform: scaleX(1);
 }
-#contact .right {
-  width: 100%;
+#contact .info-area .phone .text::before {
+  bottom: -2px;
+}
+#contact .info-area .email .text::before {
+  bottom: -5px;
+}
+#contact .email-area {
+  margin-top: 40px;
+  box-sizing: border-box;
   padding: 42px 55px;
   background-color: #fff;
   text-align: center;
 }
-#contact .right .title {
+#contact .email-area .title {
   color: #333;
   font-weight: 700;
   font-size: 40px;
   line-height: 1.2;
 }
-#contact .right form {
+#contact .email-area form {
   margin-top: 44px;
 }
-#contact .right .row {
+#contact .email-area .row {
   position: relative;
   padding-bottom: 13px;
   border-bottom: 2px solid #d9d9d9;
   text-align: left;
 }
-#contact .right .row ~ .row {
+#contact .email-area .row ~ .row {
   margin-top: 30px;
 }
-#contact .right .row::before {
+#contact .email-area .row::before {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -423,16 +472,16 @@ main > section > .title + * {
   transform: scale(0);
   transform-origin: left;
 }
-#contact .right .row:focus-within::before {
+#contact .email-area .row:focus-within::before {
   transform: scale(1);
 }
-#contact .right label {
+#contact .email-area label {
   display: block;
   color: #666;
   font-size: 13px;
   line-height: 1.5;
 }
-#contact .right input {
+#contact .email-area input {
   box-sizing: border-box;
   width: 100%;
   height: 40px;
@@ -442,10 +491,9 @@ main > section > .title + * {
   color: #333;
   outline: 0;
   font-size: 18px;
-  font-family: Poppins;
   line-height: 1.2;
 }
-#contact .right textarea {
+#contact .email-area textarea {
   width: 100%;
   min-height: 110px;
   padding-top: 9px;
@@ -454,11 +502,11 @@ main > section > .title + * {
   color: #333;
   outline: 0;
   font-size: 18px;
-  font-family: Poppins;
   line-height: 1.2;
 }
-#contact .right button[type=submit] {
-  width: 500px;
+#contact .email-area button[type=submit] {
+  width: 100%;
+  max-width: 500px;
   height: 60px;
   margin-top: 40px;
   border-radius: 30px;
@@ -468,51 +516,27 @@ main > section > .title + * {
   font-size: 20px;
 }
 
-@media screen and (max-width: 900px) {
-  body::before {
+@media screen and (max-width: 840px) {
+  .container {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+  #introduction::before {
     display: none;
   }
-  main > section > .title {
-    font-size: 3rem;
-    text-align: center;
-  }
-  #introduction .contents {
+  #introduction .container {
     flex-direction: column;
-    margin-top: 2rem;
   }
-  #introduction .contents .left {
-    width: auto;
-  }
-  #introduction .contents .left .card {
+  #introduction .left {
     margin: 0 auto;
   }
-  #introduction .contents .right {
-    margin: 3rem auto 0;
+  #introduction .right {
+    margin: 0 auto;
+    margin-top: 40px;
     padding: 0;
-    transform: translateX(-11px);
   }
-  #works {
-    margin-top: 5rem;
+  #portfolio {
+    margin-top: 40px;
   }
-  #works .item-list {
-    margin-top: 2rem;
-  }
-  #works .item {
-    flex-direction: column;
-    padding: 0 30px;
-  }
-  #works .item .left {
-    width: 100%;
-  }
-  #works .item .left .card {
-    width: 100%;
-    max-width: none;
-    height: 280px;
-    margin: 0;
-    border-radius: 30px 30px 0 0;
-  }
-  #works .item .right img {
-    width: 100%;
-    border-radius: 0 0 30px 30px;
-  }
-}/*# sourceMappingURL=style.css.map */
+}

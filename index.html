@@ -16,17 +16,15 @@
     <main>
       <!-- INTRODUCTION -->
       <section id="introduction">
-        <div class="contents">
+        <div class="container">
           <div class="left">
-            <div class="card">
-              <div class="face"></div>
-              <p class="name">노정수</p>
-              <p class="birth">1995生(29)</p>
-              <p class="job">프론트엔드 개발자</p>
-              <div class="links">
-                <a href="#">github</a>
-                <a href="#">blog</a>
-              </div>
+            <div class="face"></div>
+            <p class="name">노정수</p>
+            <p class="birth">1995生(29)</p>
+            <p class="job">웹 퍼블리셔</p>
+            <div class="links">
+              <a href="https://github.com/njsooo" target="_blank">github</a>
+              <a href="https://njsooo.github.io/" target="_blank">blog</a>
             </div>
           </div>
 
@@ -82,36 +80,49 @@
       </section>
       <!-- // INTRODUCTION -->
 
-      <!-- WORKS -->
-      <section id="works">
-        <h2 class="title">포트폴리오</h2>
-        <ul class="item-list">
-          <li class="item">
-            <div class="left">
-              <div class="card">
-                <h3 class="title">부산진구청 클론코딩</h3>
-                <p class="part">제작 인원: 1명</p>
-                <p class="skills">사용 기술: HTML, CSS, JS</p>
-                <div class="links">
-                  <a href="#">Demo</a>
-                  <a href="#">Repo</a>
-                </div>
+      <!-- PORTFOLIO -->
+      <section id="portfolio">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="text">포트폴리오</span>
+          </h2>
+
+          <ul class="portfolio-list">
+            <li>
+              <h3 class="title">
+                <a href="#" title="부산진구청 메인 페이지 이동"
+                  >부산진구청 클론코딩</a
+                >
+              </h3>
+              <p class="part">제작 인원: 1명</p>
+              <p class="tech">사용 기술: HTML, SASS, JavaScript</p>
+              <p class="tool">사용 도구: Webpack, posthtml, stylelint</p>
+              <h4>데모 목록</h4>
+              <div class="link-list">
+                <a href="#">포트폴리오 상세 설명</a>
+                <a href="#">메인</a>
+                <a href="#">서브 소개</a>
+                <a href="#">서브 민원</a>
+                <a href="#">서브 행정</a>
+                <a href="#">서브 복지</a>
+                <a href="#">서브 공개</a>
+                <a href="#">서브 소통참여</a>
               </div>
-            </div>
-            <div class="right">
-              <img src="./asset/busanjin.png" alt="" />
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </section>
-      <!-- // WORKS -->
+      <!-- // PORTFOLIO -->
 
       <!-- CONTACT -->
       <section id="contact">
-        <h2 class="title">연락</h2>
-        <div class="contents">
-          <div class="left">
-            <div class="card">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="text">연락</span>
+          </h2>
+
+          <div class="content">
+            <div class="info-area">
               <a href="#" class="phone">
                 <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                 <svg
@@ -124,10 +135,10 @@
                     fill="#000000"
                   />
                 </svg>
-                <span class="text">010-1234-5678</span>
+                <span class="text">010-4396-5090</span>
               </a>
 
-              <a href="#" class="email">
+              <a href="mailto:devnjsoo@gmail.com" class="email">
                 <?xml version="1.0" ?>
                 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -163,44 +174,44 @@
                 <span class="text">devnjsoo@gmail.com</span>
               </a>
             </div>
-          </div>
 
-          <div class="right">
-            <h3 class="title">이메일 보내기</h3>
-            <form action="#" id="form-send-email">
-              <div class="row">
-                <label for="name">성명</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="from_name"
-                  placeholder="발신인"
-                  required
-                />
-              </div>
+            <div class="email-area">
+              <h3 class="title">이메일 보내기</h3>
+              <form action="#" id="form-send-email">
+                <div class="row">
+                  <label for="input-name">성명</label>
+                  <input
+                    type="text"
+                    id="input-name"
+                    name="from_name"
+                    placeholder="발신인"
+                    required
+                  />
+                </div>
 
-              <div class="row">
-                <label for="email">연락처</label>
-                <input
-                  type="text"
-                  id="email"
-                  name="reply_to"
-                  placeholder="남기실 연락처를 입력해 주세요"
-                  required
-                />
-              </div>
+                <div class="row">
+                  <label for="input-email">연락처</label>
+                  <input
+                    type="text"
+                    id="input-email"
+                    name="reply_to"
+                    placeholder="남기실 연락처를 입력해 주세요"
+                    required
+                  />
+                </div>
 
-              <div class="row">
-                <label for="message">내용</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="내용을 입력해 주세요"
-                ></textarea>
-              </div>
+                <div class="row">
+                  <label for="textarea-message">내용</label>
+                  <textarea
+                    id="textarea-message"
+                    name="message"
+                    placeholder="내용을 입력해 주세요"
+                  ></textarea>
+                </div>
 
-              <button type="submit">전송</button>
-            </form>
+                <button type="submit">전송</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
